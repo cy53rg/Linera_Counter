@@ -15,11 +15,11 @@ linera-sdk = { version = "0.14.1", features = ["test", "wasmer"] }
 tokio = { version = "1.40", features = ["rt", "sync"] }
 
 [[bin]]
-name = "Counter_contract"
+name = "counter_contract"
 path = "src/contract.rs"
 
 [[bin]]
-name = "Counter_service"
+name = "counter_service"
 path = "src/service.rs"
 
 [profile.release]
