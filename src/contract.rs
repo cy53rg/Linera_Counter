@@ -8,7 +8,7 @@ use linera_sdk::{
     Contract, ContractRuntime,
 };
 
-use Counter::Operation;
+use counter::Operation;
 
 use self::state::CounterState;
 
@@ -20,7 +20,7 @@ pub struct CounterContract {
 linera_sdk::contract!(CounterContract);
 
 impl WithContractAbi for CounterContract {
-    type Abi = Counter::CounterAbi;
+    type Abi = counter::CounterAbi;
 }
 
 impl Contract for CounterContract {
@@ -62,7 +62,7 @@ mod tests {
     use futures::FutureExt as _;
     use linera_sdk::{util::BlockingWait, views::View, Contract, ContractRuntime};
 
-    use Counter::Operation;
+    use counter::Operation;
 
     use super::{CounterContract, CounterState};
 
